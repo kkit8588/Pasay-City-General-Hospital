@@ -1,0 +1,210 @@
+/*CUSTOM FONT FAMILY online*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&display=swap');
+
+:root{
+	--blue: #4e73df;
+	--semiwhite: rgba(255,255,255,.8);
+	--whitesmoke: #f8f9fc;
+	--white: #fff;
+	--shadow: rgba(58,59,69,.15);
+	--gray: #5a5c69;
+
+
+	--font-family: 'Nunito Sans', sans-serif;
+}
+*{	
+	padding: 0;
+	margin: 0;
+	font-family: var(--font-family);
+}
+body{
+	background: var(--whitesmoke);
+	min-height: 100vh;
+}
+.registration{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 8px 1px rgb(0, 0, 0, 0.2);
+}
+.registrationClass{
+	display: grid;
+	grid-template-rows: 1fr;
+	row-gap: 15px;
+}
+.card-header,
+.card{
+border: 1px solid #e3e6f0 !important;
+}
+.loader{
+	display: none !important;
+	z-index: 1056 !important;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) !important;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.loader img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) !important;
+
+}
+.show{
+	display: block !important;
+}
+/*==================ADMIN DASHBOARD======================*/
+/* ALL TOGGLE CLASSLIST */
+.sidebar.toggle{
+	width: 65px !important;
+}
+.hmsBody.toggle{
+	left: 65px !important;
+	width: calc(100% - 65px) !important;
+}
+.sidebar.toggle .logotext,
+.sidebar.toggle .navtext,
+.sidebar.toggle .formIcon{
+	display: none;
+}
+.sidebar.toggle .navtext2,
+.sidebar.toggle .navtext{
+	color: var(--white);
+	position: absolute;
+	left: 70px;
+	background: var(--blue);
+	padding: 0px 8px !important;
+	border-radius: 4px;
+}
+.sidebar.toggle .nav-link{
+	display: flex;
+}
+.sidebar.toggle .nav-link:hover .navtext{
+	display: flex;
+}
+
+/*========sidebar========*/
+.nav-link:focus, .nav-link:hover{
+	color: var(--white) !important;
+}
+.sidebar-divider{
+	border-top: 1px solid var(--semiwhite);
+}
+.sidebar{
+	background: var(--blue);
+	width: 230px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	transition: all 1s ease;
+	z-index: 999;
+}
+.nav-link{
+	color: var(--semiwhite) !important;
+	white-space: nowrap;
+}
+
+/*========bodycontent========*/
+.hmsBody{
+	width: calc(100% - 230px) !important;
+	position: absolute;
+	top: 0;
+	left: 230px !important;
+	transition: all 1s ease;
+/*	overflow-x: hidden;*/
+}
+.hmsheader{
+	box-shadow: 0 .15rem 1.75rem 0 var(--shadow);
+	width: 100%;
+}
+
+.profileImg{
+	width: 35px;
+	height: 35px;
+}
+.profileBtn{
+	background: transparent;
+	border: none;
+}
+/*========Form CSS========*/
+.patientfields{
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+.generateButton{
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+
+}
+
+@media (max-width: 1024px){
+
+	/* ALL TOGGLE CLASSLIST */
+	.sidebar
+	{
+		width: 65px !important;
+	}
+	.sidebar.toggle
+	{
+		width: 230px !important;
+	}
+	.hmsBody{
+		left: 65px !important;
+		width: calc( 100% - 65px ) !important;
+	}
+	.hmsBody.toggle{
+		left: 230px !important;
+		width: calc(100% - 230px) !important;
+	}
+	.sidebar .logotext,
+	.sidebar .navtext,
+	.sidebar .formIcon{
+		display: none;
+	}
+	.sidebar.toggle .logotext,
+	.sidebar.toggle .navtext{
+		display: flex;
+		all: unset;
+	}
+	.sidebar.toggle .formIcon{
+		display: flex;
+		
+	}
+	.sidebar .navtext2,
+	.sidebar .navtext{
+		color: var(--white);
+		position: absolute;
+		left: 70px;
+		background: var(--blue);
+		padding: 0px 8px !important;
+		border-radius: 4px;
+	}
+	.sidebar .nav-link{
+		display: flex;
+	}
+	.sidebar .nav-link:hover .navtext{
+		display: flex;
+	}
+
+}
+
+
+.chart-area {
+  position: relative;
+
+}
+.chart-pie {
+  position: relative;
+  height: 21.3rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .chart-pie {
+   width: 100%;
+  }
+}
+
